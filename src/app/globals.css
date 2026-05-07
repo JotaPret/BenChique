@@ -1,0 +1,254 @@
+/* ===== ÍCONES ===== */
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'remixicon/fonts/remixicon.css';
+
+/* ===== TAILWIND ===== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== VARIÁVEIS ===== */
+:root {
+  /* ===== Tema (Alien/Tech Neon) ===== */
+  --bg: #050806;
+  --surface: rgba(9, 15, 11, 0.72);
+  --panel: rgba(12, 22, 15, 0.86);
+
+  --text: #eafff1;
+  --muted: rgba(234, 255, 241, 0.72);
+
+  --accent: #7cff1a;
+  --accent-ink: #061006;
+
+  --border: rgba(124, 255, 26, 0.26);
+  --border-strong: rgba(124, 255, 26, 0.44);
+
+  --shadow-elev: 0 10px 28px rgba(0, 0, 0, 0.45);
+  --shadow-fixed: 0 14px 36px rgba(0, 0, 0, 0.55);
+
+  --gradient: linear-gradient(
+    90deg,
+    rgba(124, 255, 26, 0.95) 0%,
+    rgba(124, 255, 26, 0.25) 48%,
+    rgba(124, 255, 26, 0) 100%
+  );
+
+  --bg-pattern: radial-gradient(
+      700px circle at 18% 10%,
+      rgba(124, 255, 26, 0.13),
+      rgba(124, 255, 26, 0) 48%
+    ),
+    radial-gradient(
+      650px circle at 82% 22%,
+      rgba(124, 255, 26, 0.1),
+      rgba(124, 255, 26, 0) 55%
+    ),
+    linear-gradient(rgba(124, 255, 26, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 255, 26, 0.09) 1px, transparent 1px);
+
+  /* ===== Compat (nomes antigos usados no JSX) ===== */
+  --prim: var(--surface);
+  --prim-light: var(--bg);
+  --second: var(--accent);
+  --white: var(--text);
+  --black: #060b08;
+
+  /* animações */
+  --transition-regular: 0.25s;
+  --transition-slow: 0.55s;
+}
+
+/* ===== BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-lufga), sans-serif;
+  background-color: var(--bg);
+  background-image: var(--bg-pattern);
+  background-size: auto, auto, 56px 56px, 56px 56px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+  background-attachment: fixed;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ===== CLASSES DE FONTE ===== */
+.font-golos {
+  font-family: var(--font-golos-text), sans-serif;
+}
+
+.font-audiowide {
+  font-family: var(--font-audiowide), sans-serif;
+}
+
+.font-lufga {
+  font-family: var(--font-lufga), sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+
+.menu-link a {
+  font-weight: 600;
+  transition: var(--transition-regular);
+}
+
+.menu-link a:hover {
+  color: var(--accent);
+}
+
+.fixed-nav {
+  animation: anim-fixed var(--transition-slow) forwards linear;
+  box-shadow: var(--shadow-fixed);
+  z-index: 9999;
+}
+
+@keyframes anim-fixed {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===== EFEITO HERO ===== */
+.hero-image {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image:after {
+  content: '';
+  position: absolute;
+  inset: 8% 0 6% 6%;
+  background: var(--gradient);
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  z-index: 0;
+  opacity: 0.95;
+  clip-path: polygon(0 0, 92% 0, 100% 18%, 100% 100%, 8% 100%, 0 82%);
+}
+
+.border-shap1 {
+  border: 1px solid var(--border);
+  position: absolute;
+  top: 10%;
+  left: -8%;
+  width: 61%;
+  height: 54%;
+  border-radius: 32px;
+  z-index: -1;
+}
+
+.border-shap2 {
+  border: 1px solid var(--border);
+  position: absolute;
+  bottom: -7%;
+  right: 1%;
+  width: 50%;
+  height: 35%;
+  z-index: -1;
+  border-radius: 24px;
+}
+
+.hero-ring {
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 0 0 6px rgba(124, 255, 26, 0.06);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.hero-ring::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border-radius: 999px;
+  border: 1px dashed var(--border);
+}
+
+/* Trending Product */
+
+.product-icon {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.product-icon:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.452), #ffffff00);
+  transition: none;
+  z-index: -1;
+}
+
+.product-icon:hover:after {
+  left: 100%;
+  transition: 0.6s;
+}
+
+.product-btn {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+  transition: var(--transition-regular);
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image img {
+  transition: var(--transition-regular);
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.1);
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.582), #ffffff00);
+  transition: none;
+  z-index: -1;
+}
+
+.btn:hover:after {
+  left: 100%;
+  transition: 0.8s;
+}

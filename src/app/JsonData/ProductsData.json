@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Casaco de pele sintética",
+    "image": "/product-1.webp",
+    "price": "R$580",
+    "off": "20% off",
+    "cate": "Casacos"
+  },
+  {
+    "id": 2,
+    "title": "Blusa de lã",
+    "image": "/product-2.webp",
+    "price": "R$294",
+    "off": "20% off",
+    "cate": "Casacos"
+  },
+  {
+    "id": 3,
+    "title": "Vestido florido de verão",
+    "image": "/product-3.webp",
+    "price": "R$365",
+    "off": "20% off",
+    "cate": "Vestidos"
+  },
+  {
+    "id": 4,
+    "title": "Camisa de manga longa feminina",
+    "image": "/product-4.webp",
+    "price": "R$175",
+    "off": "20% off",
+    "cate": "Casacos"
+  },
+  {
+    "id": 5,
+    "title": "Blazer feminino",
+    "image": "/product-5.webp",
+    "price": "R$470",
+    "off": "20% off",
+    "cate": "Casacos"
+  },
+  {
+    "id": 6,
+    "title": "Blazer feminino",
+    "image": "/product-6.webp",
+    "price": "R$368",
+    "off": "20% off",
+    "cate": "Casacos"
+  },
+  {
+    "id": 7,
+    "title": "Terno masculino fola fina",
+    "image": "/product-7.webp",
+    "price": "R$479",
+    "off": "20% off",
+    "cate": "Casacos"
+  },
+  {
+    "id": 8,
+    "title": "Conjunto blazer e calça feminina",
+    "image": "/product-8.webp",
+    "price": "R$697",
+    "off": "20% off",
+    "cate": "Casacos"
+  },
+  {
+    "id": 9,
+    "title": "Blazer xadrez masculino",
+    "image": "/product-9.webp",
+    "price": "R$384",
+    "off": "20% off",
+    "cate": "Casacos"
+  },
+  {
+    "id": 10,
+    "title": "Kimono feminino",
+    "image": "/product-10.webp",
+    "price": "R$180",
+    "off": "20% off",
+    "cate": "Casacos"
+  },
+  {
+    "id": 11,
+    "title": "Casaco de pele sintética",
+    "image": "/product-11.webp",
+    "price": "R$375",
+    "off": "20% off",
+    "cate": "Casacos"
+  },
+  {
+    "id": 12,
+    "title": "Casaco de pele sintética",
+    "image": "/product-12.webp",
+    "price": "R$594",
+    "off": "'20% off",
+    "cate": "Casacos"
+  }
+]
